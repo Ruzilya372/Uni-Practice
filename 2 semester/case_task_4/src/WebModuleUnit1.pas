@@ -32,10 +32,10 @@ begin
   // Параметры подключения к MS SQL Server
   // ВНИМАНИЕ: измените на свои данные!
   Result := 'Driver={ODBC Driver 17 for SQL Server};' +
-            'Server=localhost\SQLEXPRESS;' +   // Имя вашего SQL-сервера
-            'Database=WebCompanyDB;' +         // Имя базы данных
-            'UID=sa;' +                        // Логин
-            'PWD=YourStrongPassword;';         // ПАРОЛЬ!
+            'Server=localhost\SQLEXPRESS;' +   // SQL-сервер
+            'Database=WebCompanyDB;' +         // БД
+            'UID=sa;' +                        // ллогин
+            'PWD=YourStrongPassword;';         // пароль
 end;
 
 procedure TWebModule1.WebModule1DefaultHandlerAction(Sender: TObject;
