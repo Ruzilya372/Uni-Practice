@@ -46,9 +46,9 @@ begin
     '<html lang="ru">' +
     '<head><meta charset="UTF-8"><title>Delphi Web App</title></head>' +
     '<body style="font-family: Arial; padding: 20px;">' +
-    '<h1>✅ Delphi Web-приложение работает!</h1>' +
+    '<h1>Delphi Web-приложение работает</h1>' +
     '<p>Архитектура: <b>ISAPI + IIS + MS SQL Server</b></p>' +
-    '<p><a href="/get_employees" style="font-size: 18px;">📋 Посмотреть список сотрудников (JSON)</a></p>' +
+    '<p><a href="/get_employees" style="font-size: 18px;">Посмотреть список сотрудников (JSON)</a></p>' +
     '<hr>' +
     '<p><small>Разработано в Delphi 10.2 Seattle</small></p>' +
     '</body></html>';
