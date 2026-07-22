@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{7A5B8C9D-0E1F-2A3B-4C5D-6E7F8A9B0C1D}</ProjectGuid>
+    <ProjectVersion>19.0</ProjectVersion>
+    <FrameworkType>VCL</FrameworkType>
+    <Base>True</Base>
+    <Config Condition="'$(Config)'==''">Debug</Config>
+    <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    <TargetedPlatforms>1</TargetedPlatforms>
+    <AppType>Application</AppType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+    <Base>true</Base>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <DelphiCompile Include="WebProject.dpr">
+      <MainSource>True</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="WebModuleUnit1.pas"/>
+  </ItemGroup>
+  <ItemGroup>
+    <BuildConfiguration Include="Debug">
+      <Key>Debug</Key>
+    </BuildConfiguration>
+    <BuildConfiguration Include="Release">
+      <Key>Release</Key>
+    </BuildConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <Deployment Include="$(OutputPath)\WebProject.dll">
+      <Platform>Win32</Platform>
+    </Deployment>
+  </ItemGroup>
+  <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+  <Import Project="$(APPDATA)\Embarcadero\$(BDSAppVersion)\$(DCC_ExeName).targets" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAppVersion)\$(DCC_ExeName).targets')"/>
+</Project>
